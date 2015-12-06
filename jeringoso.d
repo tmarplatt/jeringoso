@@ -2,13 +2,12 @@ module jeringoso;
 
 import std.stdio, std.regex, std.array;
 
-//tomar una frase y convertirla en jeringoso. da por hecho que los argumentos se tratan de una cadena de texto
+//tomar una frase y convertirla en jeringoso. da por hecho que los argumentos consisten en una cadena de texto
 void main(string[] args) {
 	args.popFront();
 	string[] frase;
 	foreach (arg; args) {
 		auto j = new jeringosear(arg);
-		//writeln(arg, ": ", j.papalapabrapa;
 		frase ~= j.papalapabrapa;
 	}
 	writeln(join(args, " "));
